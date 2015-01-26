@@ -23,6 +23,7 @@ import com.fasterxml.jackson.annotation.JsonTypeInfo;
         @JsonSubTypes.Type(value = PushEvent.class, name = "Push"),
         @JsonSubTypes.Type(value = TweetEvent.class, name = "Tweet"),
         @JsonSubTypes.Type(value = SMSEvent.class, name = "SMS"),
+        @JsonSubTypes.Type(value = OrganizationActivityEvent.class, name = "OrganizationActivity"), 
         @JsonSubTypes.Type(value = TicketSharingEvent.class, name = "TicketSharingEvent")
 })
 
