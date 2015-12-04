@@ -9,7 +9,8 @@ import com.fasterxml.jackson.annotation.JsonTypeInfo;
  */
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.PROPERTY, property = "type")
 @JsonSubTypes({
-        @JsonSubTypes.Type(value = CommentEvent.class, name = "Comment"),
+    @JsonSubTypes.Type(value = ScheduleAssignmentEvent.class, name = "ScheduleAssignment"),
+    @JsonSubTypes.Type(value = CommentEvent.class, name = "Comment"),
         @JsonSubTypes.Type(value = VoiceCommentEvent.class, name = "VoiceComment"),
         @JsonSubTypes.Type(value = CommentPrivacyChangeEvent.class, name = "CommentPrivacyChange"),
         @JsonSubTypes.Type(value = CreateEvent.class, name = "Create"),
